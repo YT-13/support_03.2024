@@ -11,7 +11,6 @@ last_request_time = None
 
 @csrf_exempt
 def get_exchange_rate(request):
-
     global cached_rate, last_request_time
 
     if last_request_time is not None and time.time() - last_request_time < 10:
